@@ -553,8 +553,7 @@ class RotationVisualizer:
                                     text_align=ft.TextAlign.CENTER)
         scoreboard = ft.Container(
             content=ft.Column([
-                ft.Text("SCOREBOARD", size=10, color="#666666", weight=ft.FontWeight.BOLD,
-                         letter_spacing=2),
+                ft.Text("SCOREBOARD", size=10, color="#666666", weight=ft.FontWeight.BOLD),
                 self._match_label,
                 ft.Container(height=4),
                 self._score_text,
@@ -573,8 +572,7 @@ class RotationVisualizer:
 
         stats_panel = ft.Container(
             content=ft.Column([
-                ft.Text("PLAYER STATS", size=10, color="#666666", weight=ft.FontWeight.BOLD,
-                         letter_spacing=2),
+                ft.Text("PLAYER STATS", size=10, color="#666666", weight=ft.FontWeight.BOLD),
                 *stats_rows,
             ], spacing=4),
             bgcolor="#111827", border=ft.border.all(1, "#1F2937"),
@@ -585,8 +583,7 @@ class RotationVisualizer:
         self._history_col = ft.Column(spacing=2, scroll=ft.ScrollMode.AUTO)
         history_panel = ft.Container(
             content=ft.Column([
-                ft.Text("MATCH HISTORY", size=10, color="#666666", weight=ft.FontWeight.BOLD,
-                         letter_spacing=2),
+                ft.Text("MATCH HISTORY", size=10, color="#666666", weight=ft.FontWeight.BOLD),
                 ft.Container(content=self._history_col, height=max(120, int(160 * s))),
             ], spacing=4),
             bgcolor="#111827", border=ft.border.all(1, "#1F2937"),
@@ -605,8 +602,7 @@ class RotationVisualizer:
 
         legend_panel = ft.Container(
             content=ft.Column([
-                ft.Text("LEGEND", size=10, color="#666666", weight=ft.FontWeight.BOLD,
-                         letter_spacing=2),
+                ft.Text("LEGEND", size=10, color="#666666", weight=ft.FontWeight.BOLD),
                 *legend_items,
             ], spacing=4),
             bgcolor="#111827", border=ft.border.all(1, "#1F2937"),
