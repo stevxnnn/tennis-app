@@ -466,21 +466,21 @@ class RotationVisualizer:
             left=self._bench_left, top=self._bench_top + int(3 * s), width=bw,
             content=ft.Text("🪑 BENCH", size=max(8, int(9 * s)), color="#666666",
                             text_align=ft.TextAlign.CENTER, weight=ft.FontWeight.BOLD),
-            alignment=ft.alignment.center,
+            alignment=ft.Alignment(0, 0),
         ))
         # Bench player name
         self._bench_name = ft.Text("", size=max(7, int(8 * s)), color="#AAAAAA",
                                     text_align=ft.TextAlign.CENTER, weight=ft.FontWeight.BOLD)
         els.append(ft.Container(
             left=self._bench_left, top=self._bench_top + int(78 * s), width=bw,
-            content=self._bench_name, alignment=ft.alignment.center,
+            content=self._bench_name, alignment=ft.Alignment(0, 0),
         ))
         # Bench reason
         self._bench_reason = ft.Text("", size=max(6, int(7 * s)), color="#888888",
                                       text_align=ft.TextAlign.CENTER, italic=True)
         els.append(ft.Container(
             left=self._bench_left, top=self._bench_top + int(93 * s), width=bw,
-            content=self._bench_reason, alignment=ft.alignment.center,
+            content=self._bench_reason, alignment=ft.Alignment(0, 0),
         ))
 
         # Ball (tennis-ball yellow)
@@ -512,7 +512,7 @@ class RotationVisualizer:
             label = ft.Text(name, size=max(7, int(8 * self._scale)), color=color,
                             text_align=ft.TextAlign.CENTER, weight=ft.FontWeight.BOLD)
             label_c = ft.Container(left=-100, top=-100, width=int(60 * self._scale),
-                                    content=label, alignment=ft.alignment.center)
+                                    content=label, alignment=ft.Alignment(0, 0))
             if self._anim_player:
                 label_c.animate_position = self._anim_player
             self._labels[name] = label_c
